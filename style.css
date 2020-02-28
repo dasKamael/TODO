@@ -1,0 +1,45 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+nav{
+  text-align: center;
+  background-color: #333;
+}
+
+nav h1{
+  padding: 10px;
+  color: white;
+  font-size: 2rem;
+}
+
+main{
+  padding-top: 50px;
+  background-color: rgb(233, 148, 10);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: auto 1fr;
+}
+
+.searchArea{
+
+}
+
+.todo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
