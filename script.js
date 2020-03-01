@@ -5,28 +5,33 @@ let list = document.querySelector(".todos");
 
 add.addEventListener("click", createTodo);
 list.addEventListener("click", removeTodo);
-//input.addEventListener("keyup", searchTodo);
-
 
 function createTodo() {
   let todoValue = input.value;
-  
-  let nextTodo = document.createElement("div");
-      nextTodo.classList.add("todo");
-      
-  let todo = document.createElement("h2");
-      todo.textContent = todoValue;
-  
-  let trash = document.createElement("i");
-      trash.classList.add("trash");
-      trash.classList.add("fas");
-      trash.classList.add("fa-trash-alt");
-      
-  nextTodo.appendChild(todo);
-  nextTodo.appendChild(trash);
-  list.appendChild(nextTodo);
+    // Check if input Field is Empty
+    if(todoValue.length < 1){
+        alert("Please Enter a Todo in the Field");
+    } else {
+    // Create necessary Elements
+    let nextTodo = document.createElement("div");
+    nextTodo.classList.add("todo");
+    
+    let todo = document.createElement("h2");
+    todo.textContent = todoValue;
 
-  console.log(list)
+    let trash = document.createElement("i");
+    trash.classList.add("trash");
+    trash.classList.add("fas");
+    trash.classList.add("fa-trash-alt");
+    
+    // Appending created Elements to the List 
+    nextTodo.appendChild(todo);
+    nextTodo.appendChild(trash);
+    list.appendChild(nextTodo);
+  }
+  
+  
+
 }
 
 function removeTodo(e) {
@@ -35,19 +40,3 @@ function removeTodo(e) {
         e.target.parentElement.remove();
     }
 }
-
-// TODO Search function
-// function searchTodo(e) {
-//   var text = e.target.value.toLowerCase();
-
-//   var items = document.getElementsByTagName('todo');
-//     //Convert To an Array
-//     Array.from(items).forEach(function(item) {
-//         var itemName = item.firstChild.textContent;
-//         if(itemName.toLowerCase().indexOf(text) != -1) {
-//             item.style.display = 'block';
-//         } else {
-//             item.style.display = 'none';
-//         }
-//     })
-// }
