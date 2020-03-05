@@ -5,6 +5,30 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e9940a;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
 body{
   height: 100vh;
   width: 100vw;
@@ -62,12 +86,20 @@ main{
               -20px -20px 60px #ffaa0c;
   padding: 20px;
   border-radius: 20px;
+  max-height: 80%;
+  overflow: auto;
 }
 
 .todo{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted black;
+}
+
+.trash:hover{
+  transform: scale(1.2);
 }
 
 
